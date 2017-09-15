@@ -26,7 +26,7 @@ public class Disciplina {
 	
 	@Override
 	public String toString(){
-		return "\nOs dados informados foram:\n" 
+		return "\nOs Dados Informados Foram:\n" 
 				+ "\nDisciplina: " + disciplina 
 				+ "\nEmenta: " + ementa
 				+ "\nCarga Horária: " + CargaHoraria 
