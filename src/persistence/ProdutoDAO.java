@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import entidade.Produto;
 
 //DAO - Data Access Object
+//extends é o conectivo de herança
 public class ProdutoDAO extends ConnectionDAO {
 	
 	private Connection conn;
@@ -24,7 +25,7 @@ public class ProdutoDAO extends ConnectionDAO {
 		PreparedStatement stmt = null;
 		
 		try {
-		/**?(parameter ou coringa) - são usados para represnetar os valores que seram passados*/
+		/**?(parameter ou coringa) - são usados para representar os valores que serão passados*/
 		
 		stmt = conn.prepareStatement("insert into produto values (null,?,?,?,?)");
 		

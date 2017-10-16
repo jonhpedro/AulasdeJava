@@ -27,8 +27,8 @@ public class ConnectionDAO {
 		//URL de conexão com o banco de dados
 		String url = "jdbc:mysql://localhost/projetobd";
 		
-		return DriverManager.getConnection(url,"root","");
-		
+		Connection conn =  DriverManager.getConnection(url,"root","");
+		return conn;
 		
 	}
 	public static void main(String []args) throws Exception{	
@@ -37,7 +37,7 @@ public class ConnectionDAO {
 		//testa conexao
 		
 		Connection conexao = db.getConnection();
-		System.out.println((!conexao.equals(null))? "Conexã Aberta" : "Falha ao Conectar");
+		System.out.println((!conexao.equals(null))? "Conexão Aberta" : "Falha ao Conectar");
 	}
 
 }
