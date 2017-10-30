@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.lovefood.entity.Funcionario;
+import br.com.lovefood.entity.Funcionario.Nivel;
+import br.com.lovefood.service.FuncionarioService;
+
 @WebServlet({ "/sistema/func/buscar", "/sistema/func/excluir", "/sistema/func/salvar" })
 public class ServletFuncionario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,9 +39,28 @@ public class ServletFuncionario extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
+		if (request.getServletPath().equals(PREFIX + "salvar")) {
+			salvar(request, response);
+		}
 	}
-	
+	private void salvar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		Funcionario f = new Funcionario();
+		f.setNome(request.getParameter("nome"));
+		f.setLogin(request.getParameter("login"));
+		f.setSenha(request.getParameter("senha"));
+		f.setNivel(Nivel.valueOf(request.getParameter("nivel")));
+		
+		String resposta = "";
+		
+		if(new FuncionarioService().salvar(f)) {
+			resposta = "Funcionário salvo com sucesso";
+		}
+		
+		response.getWriter().append(resposta);
+		
+	}
 	private void buscar(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		 
