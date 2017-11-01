@@ -87,7 +87,6 @@ public class FuncionarioDAO extends ConnectionDAO {
 		ResultSet rs = null;
 
 		try {
-			conn = getConnection();
 			stmt = conn.prepareStatement("select id, nome, login, nivel from funcionario");
 
 			rs = stmt.executeQuery();

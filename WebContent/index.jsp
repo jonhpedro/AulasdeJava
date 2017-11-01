@@ -53,7 +53,7 @@
 							
 							<ul class="dropdown-menu">
 								<li><a href="#"><i
-										class="glyphicon glyphicon-chevron-right"></i> Usuário</a></li>
+										class="glyphicon glyphicon-chevron-right"></i> Usu�rio</a></li>
 								<li><a href="#"><i class="glyphicon glyphicon-user"></i>
 										Perfil</a></li>
 								<li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i>
@@ -81,17 +81,17 @@
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav nav-justified">
 						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#section1">Cardápio</a></li>
-						<li><a href="#section2">Promoções</a></li>
+						<li><a href="#section1">Card�pio</a></li>
+						<li><a href="#section2">Promo��es</a></li>
 						<li><a href="#section3">Junte-se</a></li>
 						<li><a href="#section4">Sobre</a></li>
 						<li><a href="#section5">Contato</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown">Culinária <b class="caret"></b></a>
+							data-toggle="dropdown">Culin�ria <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Japonesa</a></li>
 								<li><a href="#">Italiana</a></li>
-								<li><a href="#">Árabe</a></li>
+								<li><a href="#">��rabe</a></li>
 								<li><a href="#">Mais..</a></li>
 							</ul></li>
 					</ul>
@@ -111,8 +111,8 @@
 					<h1>Lorem Ipsum</h1>
 				</div>
 
-				<p class="lead text-center">O que é Lorem Ipsum?.</p>
-				<p class="text-center">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+				<p class="lead text-center">O que � Lorem Ipsum?.</p>
+				<p class="text-center">Lorem Ipsum � simplesmente uma simula��o de texto da industria tipografica e de impressos, e vem sendo utilizado desde o s�culo XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
 			</div>
 		</div>
 
@@ -120,7 +120,7 @@
 
 		<section class="bg-1">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
-				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">Aprecie as culinárias do mundo</h2>
+				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">Aprecie as culin�rias do mundo</h2>
 			</div>
 		</section>
 

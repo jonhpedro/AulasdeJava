@@ -1,6 +1,7 @@
 package br.com.lovefood.service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.lovefood.entity.Funcionario;
@@ -38,11 +39,10 @@ public class FuncionarioService {
 	
 	public List<Funcionario> buscar() {
 		try {
-			dao.findAll();
 			return dao.findAll();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return null;
+		return new ArrayList<Funcionario>();
 	}
 }

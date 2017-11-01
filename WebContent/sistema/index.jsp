@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<div class="jumbotron col-md-6 text-center col-md-offset-3">
+	<div class="jumbotron col-md-6 text-center col-md-offset-'3">
 		<p>Área administrativa</p>
 	</div>
 	<script
