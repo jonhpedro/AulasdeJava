@@ -14,6 +14,11 @@ public class Usuario implements Serializable {
 	public Usuario() {
 	}
 
+	@Override
+	public String toString() {
+		return id + ", " + nome + ", " + login;
+	}
+
 	public Long getId() {
 		return id;
 	}

@@ -10,6 +10,11 @@ public class Funcionario extends Usuario {
 
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + ", " + nivel.toString();
+	}
+
 	public Nivel getNivel() {
 		return nivel;
 	}

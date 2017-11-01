@@ -30,7 +30,7 @@ public class ServletFuncionario extends HttpServlet {
 			buscar(request, response);
 
 		} else if (request.getServletPath().equals(PREFIX + "excluir")) {
-			response.getWriter().append("excluir");
+			excluir(request, response);
 
 		} else {
 			response.getWriter().append("URL Não encontrada!");
@@ -71,7 +71,24 @@ public class ServletFuncionario extends HttpServlet {
 			response.getWriter().append("buscar pelo id: " + request.getParameter("id"));
 		
 		} else {
-			response.getWriter().append("buscar todos");
+			
+			for (Funcionario f : new FuncionarioService().buscar()) {
+				response.getWriter().append(f.toString() + "<br>");
+				
+			}
 		}
+	}
+	
+	private void excluir(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		Long id = Long.parseLong(request.getParameter("id"));
+		
+		String resposta = "";
+		
+		if(new FuncionarioService().excluir(id)) {
+			resposta = "Funcionário excluído com sucesso";
+		}
+		
+		response.getWriter().append(resposta);
 	}
 }
