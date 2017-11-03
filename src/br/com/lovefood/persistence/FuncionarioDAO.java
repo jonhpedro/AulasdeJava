@@ -59,6 +59,50 @@ public class FuncionarioDAO extends ConnectionDAO {
 		}
 	}
 
+	public void updateNivel(Funcionario f) throws SQLException {
+
+		PreparedStatement stmt = null;
+
+		try {
+			stmt = conn.prepareStatement("update funcionario set nivel = ? where id = ?");
+			stmt.setString(1, f.getNivel().toString());
+			stmt.setLong(2, f.getId());
+
+			int count = stmt.executeUpdate();
+
+			if (count == 0)
+				throw new SQLException("Erro ao atualizar o funcionario");
+
+		} finally {
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+	}
+	
+	public void updateSenha(Funcionario f) throws SQLException {
+
+		PreparedStatement stmt = null;
+
+		try {
+			stmt = conn.prepareStatement("update funcionario set senha = ? where id = ?");
+			stmt.setString(1, f.getSenha());
+			stmt.setLong(2, f.getId());
+
+			int count = stmt.executeUpdate();
+
+			if (count == 0)
+				throw new SQLException("Erro ao atualizar o funcionario");
+
+		} finally {
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+	}
+	
 	public void delete(Long id) throws SQLException {
 
 		PreparedStatement stmt = null;
@@ -70,7 +114,7 @@ public class FuncionarioDAO extends ConnectionDAO {
 			int count = stmt.executeUpdate();
 
 			if (count == 0)
-				throw new SQLException("Erro ao excluir o funcionario");
+				throw new SQLException("Erro ao salvar o funcionario");
 
 		} finally {
 			if (stmt != null)
@@ -105,6 +149,62 @@ public class FuncionarioDAO extends ConnectionDAO {
 		}
 		
 		return funcionarios;
+	}
+	
+	public List<Funcionario> findByName(String nome) throws SQLException {
+
+		List<Funcionario> funcionarios = new ArrayList<Funcionario>();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			stmt = conn.prepareStatement("select id, nome, login, nivel from funcionario where nome = ?");
+			stmt.setString(1, nome);
+			
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				funcionarios.add(createFuncionario(rs));
+			}
+			
+		} finally {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+		
+		return funcionarios;
+	}
+	
+	public Funcionario findById(Long id) throws SQLException {
+
+		Funcionario funcionario = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			stmt = conn.prepareStatement("select id, nome, login, nivel from funcionario where id = ?");
+			stmt.setLong(1, id);
+
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				funcionario = createFuncionario(rs);
+			}
+			
+		} finally {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+		
+		return funcionario;
 	}
 	
 	private Funcionario createFuncionario(ResultSet rs) throws SQLException {

@@ -45,4 +45,42 @@ public class FuncionarioService {
 		}
 		return new ArrayList<Funcionario>();
 	}
+	
+	public List<Funcionario> buscarPorNome(String nome) {
+		try {
+			return dao.findByName(nome);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return new ArrayList<Funcionario>();
+	}
+	
+	public Funcionario buscarPorId(Long id) {
+		try {
+			return dao.findById(id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return new Funcionario();
+	}
+
+	public Boolean atualizaNivel(Funcionario f) {
+		try {
+			dao.updateNivel(f);
+			return Boolean.TRUE;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Boolean.FALSE;
+	}
+	
+	public Boolean atualizaSenha(Funcionario f) {
+		try {
+			dao.updateSenha(f);
+			return Boolean.TRUE;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Boolean.FALSE;
+	}
 }

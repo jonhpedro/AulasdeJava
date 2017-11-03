@@ -17,9 +17,10 @@ create or replace table lovefood.cliente (
 	id BIGINT PRIMARY KEY auto_increment,
 	nome varchar(150) not null,
 	login varchar(50) not null unique,
-	senha varchar(255) not null,
+	cpf varchar(11) not null unique,
 	endereco text not null,
-	telefone varchar(255) not null
+	telefone varchar(255) not null,
+	senha varchar(255) not null
 );
 
 select * from lovefood.cliente;
