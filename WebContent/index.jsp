@@ -59,7 +59,7 @@
 								</h3></a>
 
 							<ul class="dropdown-menu">
-							<c:choose>
+								<c:choose>
 									<c:when test="${true}">
 										<li><a href="#"><i
 												class="glyphicon glyphicon-chevron-right"></i> Entrar</a></li>
@@ -126,15 +126,15 @@
 
 				<p class="lead text-center">O que é Lorem Ipsum?.</p>
 				<p class="text-center">Lorem Ipsum é simplesmente uma simulação
-					de texto da industria tipografica e de impressos, e vem sendo
+					de texto da indústria tipográfica e de impressos, e vem sendo
 					utilizado desde o século XVI, quando um impressor desconhecido
 					pegou uma bandeja de tipos e os embaralhou para fazer um livro de
-					modelos de tipos. Lorem Ipsum sobreviveu nÃ£o sÃ³ a cinco sÃ©culos,
-					como tambÃ©m ao salto para a editoraÃ§Ã£o eletrÃ´nica, permanecendo
-					essencialmente inalterado. Se popularizou na dÃ©cada de 60, quando
-					a Letraset lanÃ§ou decalques contendo passagens de Lorem Ipsum, e
-					mais recentemente quando passou a ser integrado a softwares de
-					editoraÃ§Ã£o eletrÃ´nica como Aldus PageMaker.</p>
+					modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos,
+					como também ao salto para a editoração eletrônica, permanecendo
+					essencialmente inalterado. Se popularizou na década de 60, quando a
+					Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
+					recentemente quando passou a ser integrado a softwares de
+					editoração eletrônica como Aldus PageMaker.</p>
 			</div>
 		</div>
 
@@ -175,7 +175,7 @@
 
 		<section class="bg-3" id="section4">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
-				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">CulinÃ¡ria
+				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">Culinária
 					Vegana &amp; Fitness</h2>
 			</div>
 		</section>
@@ -189,8 +189,8 @@
 							<img src="resources/img/a_mineira.png" class="img-responsive">
 						</div>
 						<div class="panel-body">
-							<p class="lead">Ã Mineira Gourmet</p>
-							<p>PromoÃ§Ã£o 80% de desconto</p>
+							<p class="lead">À Mineira Gourmet</p>
+							<p>Promoção 80% de desconto</p>
 
 							<p>
 								<span class="glyphicon glyphicon-shopping-cart"
@@ -209,8 +209,8 @@
 							<img src="resources/img/a_mineira.png" class="img-responsive">
 						</div>
 						<div class="panel-body">
-							<p class="lead">Ã Mineira Gourmet</p>
-							<p>PromoÃ§Ã£o 80% de desconto</p>
+							<p class="lead">À Mineira Gourmet</p>
+							<p>Promoção 80% de desconto</p>
 
 							<p>
 								<span class="glyphicon glyphicon-shopping-cart"
@@ -229,8 +229,8 @@
 							<img src="resources/img/a_mineira.png" class="img-responsive">
 						</div>
 						<div class="panel-body">
-							<p class="lead">Ã Mineira Gourmet</p>
-							<p>PromoÃ§Ã£o 80% de desconto</p>
+							<p class="lead">À Mineira Gourmet</p>
+							<p>Promoção 80% de desconto</p>
 
 							<p>
 								<span class="glyphicon glyphicon-shopping-cart"
@@ -251,8 +251,8 @@
 
 		<div class="row">
 
-			<h1 class="text-center">Veja os restaurantes mais prÃ³ximos de
-				vocÃª!</h1>
+			<h1 class="text-center">Veja os restaurantes mais próximos de
+				você!</h1>
 
 			<div id="map-canvas"></div>
 
@@ -271,7 +271,7 @@
 					</div>
 					<div class="col-xs-4">
 						<input type="text" class="form-control" id="lastName"
-							name="lastName" placeholder="Ãltimo Nome" required>
+							name="lastName" placeholder="Último Nome" required>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -300,14 +300,14 @@
 			<div class="col-sm-3 pull-right">
 
 				<address>
-					<strong>Senac NiterÃ³i</strong><br> Rua Almirante TeffÃ©, 680<br>
-					Centro, NiterÃ³i - RJ, 24030-085<br>
-					<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-					<a href="tel:2132141717">(21) 3214-1717</a>
+					<strong>Senac Niterói</strong><br> Rua Almirante Teffé, 680<br>
+					Centro, Niterói - RJ, 24030-085<br> <span
+						class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <a
+						href="tel:2132141717">(21) 3214-1717</a>
 				</address>
 
 				<address>
-					<strong>Email Us</strong><br> <a
+					<strong>Nosso Email</strong><br> <a
 						href="mailto:cristiano.costa@rj.senac.br">Cristiano Costa</a><br>Coordenador
 					de TI
 				</address>
@@ -323,7 +323,7 @@
 				<hr>
 				<h4>Projeto modelo de uma loja virtual.</h4>
 				<p>
-					Para ver o cÃ³digo fonte desse projeto <a
+					Para ver o código fonte desse projeto <a
 						href="http://github.com/lpjunior/senacniteroi2016.5.5/tree/loveFood">
 						acesse</a> o link.
 				</p>
