@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.lovefood.entity.Cliente;
 import br.com.lovefood.service.ClienteService;
 
-@WebServlet({ "/sistema/cli/buscar", "/sistema/cli/excluir", "/sistema/cli/salvar" })
+@WebServlet({ "/sistema/cli/buscar", "/sistema/cli/excluir", "/sistema/cli/salvar", "/sistema/fun/atualizar" })
 public class ServletCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -40,6 +40,8 @@ public class ServletCliente extends HttpServlet {
 
 		if (request.getServletPath().equals(PREFIX + "salvar")) {
 			salvar(request, response);
+		} else if (request.getServletPath().equals(PREFIX + "excluir")) {
+			atualizar(request, response);
 		}
 	}
 
@@ -60,9 +62,9 @@ public class ServletCliente extends HttpServlet {
 	}
 
 	private void salvar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		Cliente c = new Cliente();
-		
+
 		c.setNome(request.getParameter("nome"));
 		c.setLogin(request.getParameter("login"));
 		c.setSenha(request.getParameter("senha"));
@@ -86,6 +88,21 @@ public class ServletCliente extends HttpServlet {
 
 		if (new ClienteService().excluir(id)) {
 			resposta = "Cliente excluído com sucesso";
+		}
+
+		response.getWriter().append(resposta);
+	}
+
+	private void atualizar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		Cliente c = new Cliente();
+		c.setId(Long.parseLong(request.getParameter("id")));
+		c.setSenha(request.getParameter("senha"));
+
+		String resposta = "";
+
+		if (new ClienteService().trocaSenha(c)) {
+			resposta = "Senha do cliente atualizada com sucesso";
 		}
 
 		response.getWriter().append(resposta);

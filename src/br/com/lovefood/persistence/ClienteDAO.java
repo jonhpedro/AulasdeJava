@@ -104,6 +104,27 @@ public class ClienteDAO extends ConnectionDAO {
 		return clientes;
 	}
 
+	public void changePassword(Cliente c) throws SQLException {
+		PreparedStatement stmt = null;
+		try {
+			stmt = conn.prepareStatement("update cliente set senha = md5(?) where id = ?");
+
+			stmt.setString(1, c.getSenha());
+			stmt.setLong(2, c.getId());
+
+			int count = stmt.executeUpdate();
+
+			if (count == 0)
+				throw new SQLException("Erro ao trocar a senha do cliente");
+			
+		} finally {
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+	}
+
 	private Cliente createCliente(ResultSet rs) throws SQLException {
 		Cliente c = new Cliente();
 

@@ -44,4 +44,14 @@ public class ClienteService {
 		}
 		return new ArrayList<Cliente>();
 	}
+
+	public Boolean trocaSenha(Cliente c) {
+		try {
+			dao.changePassword(c);
+			return Boolean.TRUE;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return Boolean.FALSE;
+	}
 }
