@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,33 +36,43 @@
 	<!-- Body -->
 	<div id="wrap">
 		<!-- Banner -->
-		<header class="masthead" style="background-image: url('resources/img/capa.jpg'); background-size: 100%">
+		<header class="masthead"
+			style="background-image: url('resources/img/capa.jpg'); background-size: 100%">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
 						<h1>
-							<a href="#" title="Bootstrap Template">
-								<img id="logo" alt="loveFood | Restaurantes Delivery" src="resources/img/logo.png" width="380">
+							<a href="#" title="Bootstrap Template"> <img id="logo"
+								alt="loveFood | Restaurantes Delivery"
+								src="resources/img/logo.png" width="380">
 							</a>
-							<p id="txtLogo" class="lead"><em>Restaurantes Delivery</em></p>
+							<p id="txtLogo" class="lead">
+								<em>Restaurantes Delivery</em>
+							</p>
 						</h1>
 					</div>
 					<!-- Menu Logado -->
-					<div class="col-sm-6" style="display: none;">
+					<div class="col-sm-6" style="display: block;">
 						<div class="pull-right  hidden-xs">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3>
 									<i class="glyphicon glyphicon-cog"></i>
 								</h3></a>
-							
+
 							<ul class="dropdown-menu">
-								<li><a href="#"><i
-										class="glyphicon glyphicon-chevron-right"></i> Usu�rio</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-user"></i>
-										Perfil</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i>
-										Carrinho</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-lock"></i>
-										Sair</a></li>
+							<c:choose>
+									<c:when test="${true}">
+										<li><a href="#"><i
+												class="glyphicon glyphicon-chevron-right"></i> Entrar</a></li>
+									</c:when>
+									<c:otherwise>
+										<li><a href="#"><i class="glyphicon glyphicon-user"></i>
+												Perfil</a></li>
+										<li><a href="#"><i
+												class="glyphicon glyphicon-shopping-cart"></i> Carrinho</a></li>
+										<li><a href="#"><i class="glyphicon glyphicon-lock"></i>
+												Sair</a></li>
+									</c:otherwise>
+								</c:choose>
 							</ul>
 						</div>
 					</div>
@@ -81,17 +94,17 @@
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav nav-justified">
 						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#section1">Card�pio</a></li>
-						<li><a href="#section2">Promo��es</a></li>
+						<li><a href="#section1">Cardápio</a></li>
+						<li><a href="#section2">Promoções</a></li>
 						<li><a href="#section3">Junte-se</a></li>
 						<li><a href="#section4">Sobre</a></li>
 						<li><a href="#section5">Contato</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown">Culin�ria <b class="caret"></b></a>
+							data-toggle="dropdown">Culinária <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Japonesa</a></li>
 								<li><a href="#">Italiana</a></li>
-								<li><a href="#">��rabe</a></li>
+								<li><a href="#">Árabe</a></li>
 								<li><a href="#">Mais..</a></li>
 							</ul></li>
 					</ul>
@@ -111,8 +124,17 @@
 					<h1>Lorem Ipsum</h1>
 				</div>
 
-				<p class="lead text-center">O que � Lorem Ipsum?.</p>
-				<p class="text-center">Lorem Ipsum � simplesmente uma simula��o de texto da industria tipografica e de impressos, e vem sendo utilizado desde o s�culo XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+				<p class="lead text-center">O que é Lorem Ipsum?.</p>
+				<p class="text-center">Lorem Ipsum é simplesmente uma simulação
+					de texto da industria tipografica e de impressos, e vem sendo
+					utilizado desde o século XVI, quando um impressor desconhecido
+					pegou uma bandeja de tipos e os embaralhou para fazer um livro de
+					modelos de tipos. Lorem Ipsum sobreviveu nÃ£o sÃ³ a cinco sÃ©culos,
+					como tambÃ©m ao salto para a editoraÃ§Ã£o eletrÃ´nica, permanecendo
+					essencialmente inalterado. Se popularizou na dÃ©cada de 60, quando
+					a Letraset lanÃ§ou decalques contendo passagens de Lorem Ipsum, e
+					mais recentemente quando passou a ser integrado a softwares de
+					editoraÃ§Ã£o eletrÃ´nica como Aldus PageMaker.</p>
 			</div>
 		</div>
 
@@ -120,7 +142,8 @@
 
 		<section class="bg-1">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
-				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">Aprecie as culin�rias do mundo</h2>
+				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">Aprecie
+					as culinárias do mundo</h2>
 			</div>
 		</section>
 
@@ -138,7 +161,9 @@
 
 				<hr>
 
-				<img src="https://cesaradames.files.wordpress.com/2012/06/boteco-do-kabec3a7a.jpg" class="img-responsive">
+				<img
+					src="https://cesaradames.files.wordpress.com/2012/06/boteco-do-kabec3a7a.jpg"
+					class="img-responsive">
 
 				<hr>
 			</div>
@@ -150,7 +175,8 @@
 
 		<section class="bg-3" id="section4">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
-				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">Culinária Vegana &amp; Fitness</h2>
+				<h2 style="padding: 20px; background-color: rgba(5, 5, 5, .8)">CulinÃ¡ria
+					Vegana &amp; Fitness</h2>
 			</div>
 		</section>
 
@@ -160,15 +186,15 @@
 
 					<div class="panel panel-default">
 						<div>
-							<img src="resources/img/a_mineira.png"
-								class="img-responsive">
+							<img src="resources/img/a_mineira.png" class="img-responsive">
 						</div>
 						<div class="panel-body">
-							<p class="lead">À Mineira Gourmet</p>
-							<p>Promoção 80% de desconto</p>
+							<p class="lead">Ã Mineira Gourmet</p>
+							<p>PromoÃ§Ã£o 80% de desconto</p>
 
 							<p>
-								<span class="glyphicon glyphicon-shopping-cart" style="width: 28px; height: 28px" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-shopping-cart"
+									style="width: 28px; height: 28px" aria-hidden="true"></span>
 							</p>
 						</div>
 					</div>
@@ -180,15 +206,15 @@
 
 					<div class="panel panel-default">
 						<div class="panel-thumbnail">
-							<img src="resources/img/a_mineira.png"
-								class="img-responsive">
+							<img src="resources/img/a_mineira.png" class="img-responsive">
 						</div>
 						<div class="panel-body">
-							<p class="lead">À Mineira Gourmet</p>
-							<p>Promoção 80% de desconto</p>
+							<p class="lead">Ã Mineira Gourmet</p>
+							<p>PromoÃ§Ã£o 80% de desconto</p>
 
 							<p>
-								<span class="glyphicon glyphicon-shopping-cart" style="width: 28px; height: 28px" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-shopping-cart"
+									style="width: 28px; height: 28px" aria-hidden="true"></span>
 							</p>
 						</div>
 					</div>
@@ -200,15 +226,15 @@
 
 					<div class="panel panel-default">
 						<div class="panel-thumbnail">
-							<img src="resources/img/a_mineira.png"
-								class="img-responsive">
+							<img src="resources/img/a_mineira.png" class="img-responsive">
 						</div>
 						<div class="panel-body">
-							<p class="lead">À Mineira Gourmet</p>
-							<p>Promoção 80% de desconto</p>
+							<p class="lead">Ã Mineira Gourmet</p>
+							<p>PromoÃ§Ã£o 80% de desconto</p>
 
 							<p>
-								<span class="glyphicon glyphicon-shopping-cart" style="width: 28px; height: 28px" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-shopping-cart"
+									style="width: 28px; height: 28px" aria-hidden="true"></span>
 							</p>
 						</div>
 					</div>
@@ -225,7 +251,8 @@
 
 		<div class="row">
 
-			<h1 class="text-center">Veja os restaurantes mais próximos de você!</h1>
+			<h1 class="text-center">Veja os restaurantes mais prÃ³ximos de
+				vocÃª!</h1>
 
 			<div id="map-canvas"></div>
 
@@ -244,7 +271,7 @@
 					</div>
 					<div class="col-xs-4">
 						<input type="text" class="form-control" id="lastName"
-							name="lastName" placeholder="Último Nome" required>
+							name="lastName" placeholder="Ãltimo Nome" required>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -259,8 +286,8 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-xs-10">
-						<input type="homepage" class="form-control"
-							placeholder="Pergunta" required>
+						<input type="homepage" class="form-control" placeholder="Pergunta"
+							required>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -273,12 +300,16 @@
 			<div class="col-sm-3 pull-right">
 
 				<address>
-					<strong>Senac Niterói</strong><br> Rua Almirante Teffé, 680<br>
-					 Centro, Niterói - RJ, 24030-085<br><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <a href="tel:2132141717">(21) 3214-1717</a>
+					<strong>Senac NiterÃ³i</strong><br> Rua Almirante TeffÃ©, 680<br>
+					Centro, NiterÃ³i - RJ, 24030-085<br>
+					<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+					<a href="tel:2132141717">(21) 3214-1717</a>
 				</address>
 
 				<address>
-					<strong>Email Us</strong><br> <a href="mailto:cristiano.costa@rj.senac.br">Cristiano Costa</a><br>Coordenador de TI
+					<strong>Email Us</strong><br> <a
+						href="mailto:cristiano.costa@rj.senac.br">Cristiano Costa</a><br>Coordenador
+					de TI
 				</address>
 			</div>
 
@@ -292,8 +323,9 @@
 				<hr>
 				<h4>Projeto modelo de uma loja virtual.</h4>
 				<p>
-					Para ver o código fonte desse projeto <a
-						href="http://github.com/lpjunior/senacniteroi2016.5.5/tree/loveFood"> acesse</a> o link.
+					Para ver o cÃ³digo fonte desse projeto <a
+						href="http://github.com/lpjunior/senacniteroi2016.5.5/tree/loveFood">
+						acesse</a> o link.
 				</p>
 				<hr>
 				<ul class="list-inline center-block">
@@ -319,7 +351,7 @@
 		<div class="container">
 			<p class="text-muted">
 				Senac Rio <span style="color: orangered !important;">|</span>
-				Unidade Niterói <a href="rj.senac.br">Visite</a>
+				Unidade NiterÃ³i <a href="rj.senac.br">Visite</a>
 			</p>
 		</div>
 	</div>

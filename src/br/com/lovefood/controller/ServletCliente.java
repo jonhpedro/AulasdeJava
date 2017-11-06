@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.lovefood.entity.Cliente;
 import br.com.lovefood.service.ClienteService;
 
-@WebServlet({ "/sistema/cli/buscar", "/sistema/cli/excluir", "/sistema/cli/salvar", "/sistema/fun/atualizar" })
+@WebServlet({ "/sistema/cli/buscar", "/sistema/cli/excluir", "/sistema/cli/salvar", "/sistema/cli/atualizar" })
 public class ServletCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
