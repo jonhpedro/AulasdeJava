@@ -98,3 +98,5 @@ $(document).ready(function() {
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 ga('create', 'UA-40413119-1', 'bootply.com');
 ga('send', 'pageview');
+
+
