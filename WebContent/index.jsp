@@ -61,7 +61,7 @@
 							<ul class="dropdown-menu">
 								<c:choose>
 									<c:when test="${true}">
-										<li><a href="#"><i
+										<li><a href="sistema/index.jsp"><i
 												class="glyphicon glyphicon-chevron-right"></i> Entrar</a></li>
 									</c:when>
 									<c:otherwise>

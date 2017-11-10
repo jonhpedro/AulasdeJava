@@ -4,9 +4,12 @@
 <html lang="pt-br">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Seja Bem vindo ao loveFood | Área do cliente</title>
 </head>
 <body>
-	<h1>Área do Sistema</h1>
+	<h1>Olá ${cliente.nome}</h1>
+	<form>
+		<button class="btn btn-default" formaction="../logout" formmethod="post">Sair</button>
+	</form>
 </body>
 </html>

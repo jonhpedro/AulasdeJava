@@ -23,7 +23,11 @@ create or replace table lovefood.cliente (
 	senha varchar(255) not null
 );
 
+insert into lovefood.cliente values (null, 'Luis', 'lpjr', '12345678900', 'rua 0', '(21)2222-2222', md5('123'))
+
 select * from lovefood.cliente;
+
+select id, nome, login, cpf, endereco, telefone from lovefood.cliente where login like 'lpjr' and senha md5('123');
 
 SET @sql = CONCAT('SELECT ', (
 		SELECT REPLACE(GROUP_CONCAT(COLUMN_NAME), 'senha,', '') 
