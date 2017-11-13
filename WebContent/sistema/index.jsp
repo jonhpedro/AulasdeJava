@@ -30,7 +30,7 @@
 							class="pass-reset-submit btn btn-success btn-block">Recuperar</button>
 					</div>
 				</div>
-				<div class="wrap">
+				<div class="wrap"> <!-- not equals(ne) | equals(eq) -->
 					<c:if test="${msg ne null}">
 						<p class="form-title" style="color: red">${msg}</p>
 					</c:if>

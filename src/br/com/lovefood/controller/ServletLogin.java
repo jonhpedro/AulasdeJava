@@ -42,8 +42,10 @@ public class ServletLogin extends HttpServlet {
 	private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		Usuario usuario = new Usuario();
+		
 		usuario.setLogin(request.getParameter("txtLogin"));
 		usuario.setSenha(request.getParameter("txtSenha"));
+		
 		HttpSession session = request.getSession();
 
 		if (new UsuarioService().efetuaLogin(usuario) != null) {
