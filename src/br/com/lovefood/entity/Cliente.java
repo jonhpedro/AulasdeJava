@@ -2,9 +2,6 @@ package br.com.lovefood.entity;
 
 public class Cliente extends Usuario {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private String cpf;
