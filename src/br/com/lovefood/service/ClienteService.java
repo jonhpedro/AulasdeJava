@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.lovefood.entity.Cliente;
+import br.com.lovefood.entity.Usuario;
 import br.com.lovefood.persistence.ClienteDAO;
 
 public class ClienteService {
@@ -54,4 +55,16 @@ public class ClienteService {
 		}
 		return Boolean.FALSE;
 	}
+
+	public Cliente efetuarLogin(Usuario usuario) {
+		try {
+			return dao.efetuarLogin(usuario);
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	
 }
